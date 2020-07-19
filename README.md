@@ -32,3 +32,14 @@ what to use to access the html template
 
 
 ### Accessing static files.
+
+
+## Module 2 
+### Creating and communincating bewtwween components
+- inline template
+- using external template
+- inter-component commmunication
+- styling components
+- style encapsulation
+
+
