@@ -29,3 +29,6 @@ what to use to access the html template
 - declarations: components
 - imports: other modules are put here
 - providers: services and put here
+
+
+### Accessing static files.
