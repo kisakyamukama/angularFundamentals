@@ -18,3 +18,14 @@
 ### What we are going to be building
 - App that display and allows users to create tech events.
 
+### Angular CLI 
+-  used for creating angular projects and adding in some additional features
+
+#### selector
+what to use to access the html template
+
+
+### Modules
+- declarations: components
+- imports: other modules are put here
+- providers: services and put here
