@@ -42,4 +42,8 @@ what to use to access the html template
 - styling components
 - style encapsulation
 
+## Passing data from parent to child component
+- In the parent coponent <child-component-selector [event]="data-object"></child-component-selector>
+- In the child: declare @Input()  event:any (in the constructor, import Input from angular/core) then use event(data)
+
 
