@@ -24,6 +24,7 @@ import { Component, Input,Output, EventEmitter } from '@angular/core';
 
 export class EventThumbnailComponent {
   @Input() event: any; // event will be passed in from another component.
+  someProperty = "Some Property";
   @Output() eventClick =new EventEmitter();
   handleClickMe() {
     this.eventClick.emit(this.event.name);
