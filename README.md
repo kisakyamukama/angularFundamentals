@@ -62,4 +62,19 @@ what to use to access the html template
    return ['']
  }`
 
+-ngStyle
+: style binding 
+, 
+similar to 
+ngClass thou ngStyle and return values are key pair (object)
+- ` <div [ngStyle]="getStartTimeStyle()" [ngSwitch]="event.time">`
+- `
+  getStartTimeStyle() :any{
+  //  const isEarlyStart = this.event && this.event.time === '8:00 am';
+  //  return {green: isEarlyStart, bold: isEarlyStart}
+  if( this.event && this.event.time === '8:00 am')
+     return {color:'#003300', 'font-weight': 'bold'}
+   return {}
+ }
 
+`

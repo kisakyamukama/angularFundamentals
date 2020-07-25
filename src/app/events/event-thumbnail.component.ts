@@ -4,7 +4,6 @@ import { Component, Input,Output, EventEmitter } from '@angular/core';
   selector: 'event-thumbnail',
   templateUrl:'./event-thumbnail.component.html',
         styles: [`
-          .green { color: #003300 !important; }
           .bold { font-weight;}
           .pad-left { margin-left: 10px;}
           .well div { color: #bbb;}
@@ -27,13 +26,12 @@ export class EventThumbnailComponent {
   //   console.log('foo');
   // }
 
-  getStartTimeClass()
- {
+  getStartTimeStyle() :any{
   //  const isEarlyStart = this.event && this.event.time === '8:00 am';
   //  return {green: isEarlyStart, bold: isEarlyStart}
   if( this.event && this.event.time === '8:00 am')
-     return ['green bold']
-   return ['']
+     return {color:'#003300', 'font-weight': 'bold'}
+   return {}
  }
 
 
