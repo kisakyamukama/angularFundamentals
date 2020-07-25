@@ -47,3 +47,19 @@ what to use to access the html template
 - In the child: declare @Input()  event:any (in the constructor, import Input from angular/core) then use event(data)
 
 
+
+## styling 
+- ngClass => calls a method which returns css classes to apply to the component
+` <div [ngClass]="getStartTimeClass()" [ngSwitch]="event.time">
+   </div>`
+
+   method called 
+   `  getStartTimeClass()
+ {
+  
+  if( this.event && this.event.time === '8:00 am')
+     return ['green bold']
+   return ['']
+ }`
+
+
