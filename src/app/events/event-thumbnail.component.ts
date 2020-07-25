@@ -6,7 +6,7 @@ import { Component, Input,Output, EventEmitter } from '@angular/core';
             <div class="well hoverwell thumbnail">
             <h2>{{event?.name}}</h2>
             <div>Date: {{event?.date}}</div>
-            <div [ngSwitch]="event.time">
+            <div [ngClass]="getStartTimeClass()" [ngSwitch]="event.time">
              Time: {{event?.time}}
 
              <span *ngSwitchCase="'8:00 am'">(Early Start)</span>
@@ -26,6 +26,8 @@ import { Component, Input,Output, EventEmitter } from '@angular/core';
             </div>
         `,
         styles: [`
+          .green { color: #003300 !important; }
+          .bold { font-weight;}
           .pad-left { margin-left: 10px;}
           .well div { color: #bbb;}
           `
@@ -38,12 +40,24 @@ import { Component, Input,Output, EventEmitter } from '@angular/core';
 export class EventThumbnailComponent {
   @Input() event: any; // event will be passed in from another component.
   // someProperty = "Some Property";
-  @Output() eventClick =new EventEmitter();
-  handleClickMe() {
-    this.eventClick.emit(this.event.name);
-  }
+  // @Output() eventClick =new EventEmitter();
+  // handleClickMe() {
+  //   this.eventClick.emit(this.event.name);
+  // }
 
-  logFoo() {
-    console.log('foo');
-  }
+  // logFoo() {
+  //   console.log('foo');
+  // }
+
+  getStartTimeClass()
+ {
+  //  const isEarlyStart = this.event && this.event.time === '8:00 am';
+  //  return {green: isEarlyStart, bold: isEarlyStart}
+  if( this.event && this.event.time === '8:00 am')
+     return ['green bold']
+   return ['']
+ }
+
+
+
 }
